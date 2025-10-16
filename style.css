@@ -1,0 +1,103 @@
+:root {
+  --base: #6b1b0f;
+  --contrast: #ffffff;
+}
+
+/* General layout */
+body {
+  scroll-behavior: smooth;
+  padding-top: 70px;
+}
+
+section {
+  min-height: 80vh;
+  padding: 60px 0;
+  scroll-margin-top: 70px;
+}
+
+/* Hero */
+#first-section {
+  background-color: var(--base);
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+  color: var(--base);
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: var(--base);
+  color: var(--contrast) !important;
+  border-radius: 6px;
+}
+
+.navbar-logo {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-left: 20px;
+}
+
+/* Cards */
+.card-header {
+  background-color: var(--base);
+  color: var(--contrast);
+  font-weight: 600;
+  height: 80px; /* Set a fixed height */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  text-align: center; /* Just in case */
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive tweaks */
+@media (min-width: 992px) {
+  .navbar-nav {
+    width: 600px;
+  }
+  .navbar-nav a {
+    margin-right: 20px;
+  }
+}
+
+.carousel {
+  position: relative;
+  overflow: visible; /* allow controls to go outside */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* make them narrower */
+}
+
+.carousel-control-prev {
+  left: -60px; /* move left button outside */
+}
+
+.carousel-control-next {
+  right: -60px; /* move right button outside */
+}
+
+/* Optional: make the icons more visible */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--base);
+  border-radius: 50%;
+  padding: 10px;
+}
